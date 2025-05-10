@@ -1,0 +1,82 @@
+/* Importing Tailwind's utilities and base styles */
+@tailwind base;
+
+/* Adding custom global styles and reset under @layer base */
+@layer base {
+  /* Root custom colors */
+  :root {
+    --color-charcoal: #1a1a1a; /* Charcoal */
+    --color-teal: #009eb2; /* Teal */
+    --color-pink: #ff4da6; /* Pink */
+    --color-magenta: #cc1a6f; /* Magenta */
+    --color-offwhite: #f4f4f4; /* Off-white (for backgrounds and contrast) */
+    /* Success, Error, and Warning colors */
+    --color-success: #4caf50; /* Green (success) */
+    --color-error: #f44336; /* Red (error) */
+    --color-warning: #ff9800; /* Orange (warning) */
+  }
+
+  /* Global box-sizing, margin, and padding reset */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Remove default margin on all elements */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remove list styles on ul, ol elements */
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  /* Core body defaults */
+  body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: "Righteous", sans-serif;
+    color: var(--color-offwhite);
+  }
+
+  /* Make images easier to work with */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /* Specific header styling */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .family-heading {
+    font-family: "Rock Salt", cursive;
+    font-weight: normal;
+  }
+
+  .family-bread {
+    font-family: "Righteous", sans-serif;
+  }
+}
+
+/* Injecting Tailwind’s component classes (like buttons, forms, etc.) */
+@tailwind components;
+
+/* Injecting Tailwind’s utility classes (like margin, padding, text-color) */
+@tailwind utilities;

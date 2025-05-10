@@ -1,0 +1,21 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: ["./components/**/*.{vue,js,ts}", "./layouts/**/*.vue", "./pages/**/*.vue", "./app.vue", "./plugins/**/*.{js,ts}"],
+  theme: {
+    extend: {
+      colors: {
+        charcoal: "var(--color-charcoal)",
+        teal: "var(--color-teal)",
+        pink: "var(--color-pink)",
+        magenta: "var(--color-magenta)",
+        offwhite: "var(--color-offwhite)",
+        success: "var(--color-success)",
+        error: "var(--color-error)",
+        warning: "var(--color-warning)",
+      },
+    },
+  },
+};
+
+export default config;
