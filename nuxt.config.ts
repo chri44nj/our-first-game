@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
@@ -13,5 +12,18 @@ export default defineNuxtConfig({
     },
   },
   css: ["@/assets/css/tailwind.css"],
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/supabase"],
+  supabase: {
+    redirect: true,
+    redirectOptions: {
+      login: "/login",
+      callback: "/confirm",
+      include: undefined,
+      exclude: [],
+      saveRedirectToCookie: false,
+    },
+  },
+  resolutions: {
+    cookie: "0.7.2",
+  },
 });

@@ -16,6 +16,7 @@ const config: Config = {
       },
     },
   },
+  safelist: ["bg-charcoal", "bg-teal", "bg-pink", "bg-magenta", "bg-offwhite", "bg-success", "bg-error", "bg-warning"],
 };
 
 export default config;

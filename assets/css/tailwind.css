@@ -37,7 +37,6 @@
 
   /* Core body defaults */
   body {
-    min-height: 100vh;
     line-height: 1.5;
     font-family: "Righteous", sans-serif;
     color: var(--color-offwhite);
@@ -84,6 +83,11 @@
 
   .family-bread {
     font-family: "Righteous", sans-serif;
+  }
+
+  .text-page {
+    padding-block: 5rem;
+    padding-inline: clamp(1rem, 15vw, 20rem);
   }
 }
 

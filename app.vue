@@ -1,11 +1,7 @@
-<script setup>
-// optional, can be empty
-</script>
+<script setup></script>
 
 <template>
-  <div>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

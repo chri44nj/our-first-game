@@ -1,10 +1,14 @@
 <script setup>
+const props = defineProps(["menuOpen"]);
 const emit = defineEmits();
-const menuOpen = ref(false);
+
+const localMenuOpen = computed({
+  get: () => props.menuOpen,
+  set: (value) => emit("update:menuOpen", value),
+});
 
 const toggleMenu = () => {
-  menuOpen.value = !menuOpen.value;
-  emit("update:menuOpen", menuOpen.value); // Emit the new value to parent
+  localMenuOpen.value = !localMenuOpen.value;
 };
 </script>
 
