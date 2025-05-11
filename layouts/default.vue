@@ -34,6 +34,7 @@ const logOut = async () => {
     error.value = logoutError.message; // Display logout error
   } else {
     user.value = null; // Clear user details
+    menuOpen.value = false;
   }
 };
 
