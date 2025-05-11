@@ -1,6 +1,4 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import { useRouter } from "vue-router";
 import BurgerMenu from "~/components/BurgerMenu.vue";
 import supabase from "~/utils/supabase"; // Correct default import
 import Login from "~/components/Login.vue"; // Import the Login component
@@ -37,12 +35,6 @@ const logOut = async () => {
     menuOpen.value = false;
   }
 };
-
-// Navigate to login page (if needed)
-const router = useRouter();
-const redirectToLogin = () => {
-  router.push("/login");
-};
 </script>
 
 <template>
@@ -51,17 +43,18 @@ const redirectToLogin = () => {
       <span>{{ user?.email }}</span>
       <button v-if="user" class="hover:text-offwhite transition-colors duration-300" @click="logOut">Log Out</button>
     </header>
-
     <main class="p-8 relative">
+      <NavMenu :menuOpen="menuOpen" />
+
       <BurgerMenu v-if="user" v-model:menuOpen="menuOpen" />
       <Login v-if="!user" />
-      <div v-else>
+      <div v-show="user">
         <slot />
       </div>
     </main>
 
     <footer class="flex items-center justify-center bg-magenta text-charcoal h-10 text-center fixed w-full z-10 transition-all duration-300 ease-in-out" :class="menuOpen && user ? 'bottom-0 opacity-100' : '-bottom-10 opacity-0'">
-      <p>&copy; 2025 Empire of Drugs. All Rights Reserved.</p>
+      <p>&copy; 2025 Empire of Drugs | All Rights Reserved | Poruma & Yobnilmerg</p>
     </footer>
   </div>
 </template>

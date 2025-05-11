@@ -78,6 +78,10 @@
     font-weight: normal;
   }
 
+  h1 {
+    font-size: 2rem;
+  }
+
   .family-bread {
     font-family: "Righteous", sans-serif;
   }
