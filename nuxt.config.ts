@@ -10,9 +10,11 @@ export default defineNuxtConfig({
         },
       ],
     },
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "layout", mode: "out-in" },
   },
   css: ["@/assets/css/tailwind.css"],
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/supabase"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/supabase", "@nuxt/icon"],
   supabase: {
     redirect: true,
     redirectOptions: {

@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div>
+  <div class="text-page">
     <h1>Playground</h1>
   </div>
 </template>

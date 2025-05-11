@@ -78,7 +78,19 @@
   }
 
   h1 {
-    font-size: 2rem;
+    @apply text-4xl text-teal;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-xl;
+  }
+
+  p {
+    max-width: 60ch;
   }
 
   .family-bread {
@@ -88,6 +100,18 @@
   .text-page {
     padding-block: 5rem;
     padding-inline: clamp(1rem, 15vw, 20rem);
+  }
+
+  .text-highlight {
+    @apply text-magenta;
+  }
+
+  .hopacity-80 {
+    @apply opacity-80 hover:opacity-100 focus:opacity-100 transition-opacity duration-300;
+  }
+
+  .hopacity-50 {
+    @apply opacity-50 hover:opacity-100 focus:opacity-100 transition-opacity duration-300;
   }
 }
 

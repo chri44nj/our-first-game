@@ -11,9 +11,7 @@ const backgroundColor = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-1 items-center">
-    <div class="rounded-full h-8 w-8" :class="[backgroundColor, bordered ? 'border border-offwhite' : '']" :title="name"></div>
-  </div>
+  <div class="rounded-full h-8 w-8 cursor-pointer" :class="[backgroundColor, bordered ? 'border border-offwhite' : '']" :title="name"></div>
 </template>
 
 <style></style>
