@@ -77,6 +77,15 @@ onMounted(() => {
           </div>
         </div>
       </section>
+      <section>
+        <h2 class="mb-2">Sounds</h2>
+        <div class="p-4 border border-offwhite">
+          <p>Songs</p>
+          <div class="flex flex-col gap-2">
+            <a href="https://www.youtube.com/watch?v=_Ci0Kgdpgsw&ab_channel=Timecop1983" target="_blank" class="w-fit" title="Click to hear song">Timecop1983 - On the Run</a>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>

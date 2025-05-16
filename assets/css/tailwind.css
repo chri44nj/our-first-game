@@ -1,19 +1,17 @@
-/* Importing Tailwind's utilities and base styles */
 @tailwind base;
-
-/* Adding custom global styles and reset under @layer base */
 @layer base {
-  /* Root custom colors */
   :root {
-    --color-charcoal: #1a1a1a; /* Charcoal */
-    --color-teal: #009eb2; /* Teal */
-    --color-pink: #ff4da6; /* Pink */
-    --color-magenta: #cc1a6f; /* Magenta */
-    --color-offwhite: #f4f4f4; /* Off-white (for backgrounds and contrast) */
-    /* Success, Error, and Warning colors */
-    --color-success: #4caf50; /* Green (success) */
-    --color-error: #f44336; /* Red (error) */
-    --color-warning: #ff9800; /* Orange (warning) */
+    --color-charcoal: #1a1a1a;
+    --color-teal: #009eb2;
+    --color-pink: #ff4da6;
+    --color-magenta: #cc1a6f;
+    --color-offwhite: #f4f4f4;
+    --color-softwhite: #fafafa;
+    --color-lightgrey: #d1d1d1;
+    --color-darkgrey: #4a4a4a;
+    --color-success: #4caf50;
+    --color-error: #f44336;
+    --color-warning: #ff9800;
   }
 
   /* Global box-sizing, margin, and padding reset */
@@ -100,6 +98,11 @@
   .text-page {
     padding-block: 5rem;
     padding-inline: clamp(1rem, 15vw, 20rem);
+  }
+
+  .full-page {
+    height: 100dvh;
+    width: 100dvw;
   }
 
   .text-highlight {
